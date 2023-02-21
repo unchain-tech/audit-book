@@ -1,25 +1,45 @@
 {
-  "name": "audit-book",
-  "version": "0.1.0",
-  "description": "A book for everything related to smart contract auditing.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "honkit": "cd packages/book && npm run honkit"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/unchain-tech/audit-book.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/unchain-tech/audit-book/issues"
-  },
-  "homepage": "https://github.com/unchain-tech/audit-book#readme",
-  "workspaces": [
-    "packages\\contracts",
-    "packages\\book"
-  ]
+    "name": "audit-book",
+    "version": "0.1.0",
+    "description": "A book for everything related to smart contract auditing.",
+    "keywords": [],
+    "license": "ISC",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/unchain-tech/audit-book.git"
+    },
+    "bugs": {
+        "url": "https://github.com/unchain-tech/audit-book/issues"
+    },
+    "homepage": "https://github.com/unchain-tech/audit-book#readme",
+    "contributors": [
+        "Haku <32897506+0xHaku@users.noreply.github.com>",
+        "mashharuki <avp.104.106.107@ae.auone-net.jp>",
+        "SHØ <neila@users.noreply.github.com>"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "honkit": "cd packages/book && npm run honkit",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write ."
+    },
+    "workspaces": [
+        "packages\\contracts",
+        "packages\\book"
+    ],
+    "simple-git-hooks": {
+        "pre-commit": "npx lint-staged"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.53.0",
+        "@typescript-eslint/parser": "^5.53.0",
+        "eslint": "^8.34.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "2.8.4",
+        "simple-git-hooks": "^2.8.1",
+        "solhint": "^3.4.0"
+    }
 }
