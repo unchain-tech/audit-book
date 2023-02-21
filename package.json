@@ -1,7 +1,7 @@
 {
     "name": "audit-book",
     "version": "0.1.0",
-    "description": "A book for everything related to smart contract auditing.",
+    "description": "A book for all things related to smart contract auditing.",
     "keywords": [],
     "license": "ISC",
     "main": "index.js",
