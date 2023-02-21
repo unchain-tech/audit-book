@@ -21,8 +21,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "honkit": "cd packages/book && npm run honkit",
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix .",
+        "lint": "eslint . && solhint --max-warnings 0 -c packages/contracts/**/*.sol",
+        "lint:fix": "eslint --fix . && solhint --fix --max-warnings 0 -c packages/contracts/**/*.sol",
         "prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write ."
     },
     "workspaces": [
