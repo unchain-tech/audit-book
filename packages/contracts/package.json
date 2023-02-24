@@ -16,5 +16,10 @@
     "bugs": {
         "url": "https://github.com/unchain-tech/audit-book/issues"
     },
-    "homepage": "https://github.com/unchain-tech/audit-book#readme"
+    "homepage": "https://github.com/unchain-tech/audit-book#readme",
+    "dependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+        "@openzeppelin/contracts": "^4.8.1",
+        "hardhat": "^2.12.7"
+    }
 }
