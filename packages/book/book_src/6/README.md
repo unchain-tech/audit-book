@@ -1,1 +1,1 @@
-## OpenZppelinライブラリの解説 / CTFの解説
+## OpenZppelin ライブラリの解説 / CTF の解説
