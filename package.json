@@ -27,7 +27,8 @@
     },
     "workspaces": [
         "packages\\contracts",
-        "packages\\book"
+        "packages\\book",
+        "packages\\interface"
     ],
     "simple-git-hooks": {
         "pre-commit": "npx lint-staged"
