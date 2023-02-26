@@ -1,2 +1,8 @@
 **/node_modules
+
 packages/book/docs
+
+packages/contracts/artifacts
+packages/contracts/cache
+
+packages/interface/public
