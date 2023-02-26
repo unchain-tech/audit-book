@@ -19,11 +19,14 @@
         "SHØ <neila@users.noreply.github.com>"
     ],
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "honkit": "cd packages/book && npm run honkit",
+        "start:interface": "npm run start -w packages/interface",
         "lint": "eslint . && solhint --max-warnings 0 -c packages/contracts/**/*.sol",
         "lint:fix": "eslint --fix . && solhint --fix --max-warnings 0 -c packages/contracts/**/*.sol",
-        "prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write ."
+        "prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write .",
+        "prettier:check": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --check .",
+        "test": "npm run --workspaces test",
+        "test:contract": "npm run test -w packages/contracts"
     },
     "workspaces": [
         "packages\\contracts",
