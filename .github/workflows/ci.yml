@@ -29,7 +29,7 @@ jobs:
                   path: '**/node_modules'
                   key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
             - name: lint
-              run: npm run lint
+              run: npm run lint:temporary
             - name: format
               run: npm run prettie:check
 

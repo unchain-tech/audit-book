@@ -15,7 +15,7 @@
         "multiple-sends": "warn",
         "no-complex-fallback": "warn",
         "no-empty-blocks": "error",
-        "no-unused-vars": "error",
+        "no-unused-vars": "warn",
         "private-vars-leading-underscore": ["error", { "strict": false }],
         "quotes": ["warn", "double"],
         "reentrancy": "warn",

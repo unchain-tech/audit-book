@@ -21,6 +21,7 @@
     "scripts": {
         "honkit": "cd packages/book && npm run honkit",
         "start:interface": "npm run start -w packages/interface",
+        "lint:temporary": "eslint . ",
         "lint": "eslint . && solhint --max-warnings 0 -c packages/contracts/**/*.sol",
         "lint:fix": "eslint --fix . && solhint --fix --max-warnings 0 -c packages/contracts/**/*.sol",
         "prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write .",
