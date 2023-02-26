@@ -26,10 +26,11 @@ contract AuditBook is ERC721, Ownable {
     }
 
     function safeMint(address to) external {
-        IERC20(chai).safeTransferFrom(msg.sender, address(this), price);
+        if (balanceOf(to) > 0) revert("Already has an AuditBook");
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
+        IERC20(chai).safeTransferFrom(msg.sender, address(this), price);
     }
 
     function tokenURI(uint tokenId) public view virtual override returns (string memory) {
