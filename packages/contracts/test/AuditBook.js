@@ -11,7 +11,7 @@ describe('AuditBookNFT', function () {
         const [owner, otherAccount] = await ethers.getSigners();
 
         const TestERC20 = await hre.ethers.getContractFactory('TestERC20');
-        const testERC20 = await TestERC20.deploy(BigNumber.from(10).pow(20));
+        const testERC20 = await TestERC20.deploy(BigNumber.from(10).pow(21));
 
         const AuditBook = await hre.ethers.getContractFactory('AuditBook');
         const auditBook = await AuditBook.deploy(
@@ -54,6 +54,22 @@ describe('AuditBookNFT', function () {
             await expect(
                 auditBook.connect(otherAccount).safeMint(otherAccount.address)
             ).to.be.reverted;
+        });
+        it('Should fail on the second mint to same address', async function () {
+            const { auditBook, testERC20, owner, otherAccount } =
+                await loadFixture(deployAuditBookFixture);
+            await expect(
+                testERC20.approve(auditBook.address, BigNumber.from(10).pow(18))
+            ).not.to.be.reverted;
+            await expect(auditBook.safeMint(otherAccount.address)).not.to.be
+                .reverted;
+
+            await expect(
+                testERC20.approve(auditBook.address, BigNumber.from(10).pow(18))
+            ).not.to.be.reverted;
+            await expect(
+                auditBook.safeMint(otherAccount.address)
+            ).to.be.revertedWith('Already has an AuditBook');
         });
     });
 
