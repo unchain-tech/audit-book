@@ -10,11 +10,11 @@ module.exports = {
     networks: {
         polygon: {
             url: process.env.POLYGON_ALCHEMY_KEY,
-            accounts: [`${process.env.PRIVATE_KEY}`],
+            accounts: [process.env.PRIVATE_KEY],
         },
         mumbai: {
             url: process.env.MUMBAI_ALCHEMY_KEY,
-            accounts: [`${process.env.PRIVATE_KEY}`],
+            accounts: [process.env.PRIVATE_KEY],
         },
     },
 };
