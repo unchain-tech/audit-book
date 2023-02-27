@@ -10,7 +10,8 @@ const { BigNumber } = require('ethers');
 async function main() {
     const AuditBook = await hre.ethers.getContractFactory('AuditBook');
     const auditBook = await AuditBook.deploy(
-        BigNumber.from(10).pow(20),
+        '0x4491d1c47bbde6746f878400090ba6935a91dab6',
+        ethers.utils.parseEther('1000'),
         'ipfs://QmZyDPjt35VYvFLB7r76ME78ADMH7ZvuMGbeV4UzbPjPHU'
     );
 
