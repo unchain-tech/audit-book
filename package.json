@@ -16,8 +16,9 @@
     "contributors": [
         "Haku <32897506+0xHaku@users.noreply.github.com>",
         "mashharuki <avp.104.106.107@ae.auone-net.jp>",
-        "SHØ <neila@users.noreply.github.com>",
-        "Yosuke <yosuke2002jp@yahoo.co.jp>"
+        "Yosuke <yosuke2002jp@yahoo.co.jp>",
+        "yawn <69970183+yawn-c111@users.noreply.github.com>",
+        "SHØ <neila@users.noreply.github.com>"
     ],
     "scripts": {
         "honkit": "cd packages/book && npm run honkit",
