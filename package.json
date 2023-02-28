@@ -16,8 +16,9 @@
     "contributors": [
         "Haku <32897506+0xHaku@users.noreply.github.com>",
         "mashharuki <avp.104.106.107@ae.auone-net.jp>",
-        "SHØ <neila@users.noreply.github.com>",
-        "Yosuke <yosuke2002jp@yahoo.co.jp>"
+        "Yosuke <yosuke2002jp@yahoo.co.jp>",
+        "yawn <69970183+yawn-c111@users.noreply.github.com>",
+        "SHØ <neila@users.noreply.github.com>"
     ],
     "scripts": {
         "honkit": "cd packages/book && npm run honkit",
@@ -40,6 +41,7 @@
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.53.0",
         "@typescript-eslint/parser": "^5.53.0",
+        "dotenv": "^16.0.3",
         "eslint": "^8.34.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-prettier": "^4.2.1",
