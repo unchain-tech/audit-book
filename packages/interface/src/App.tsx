@@ -1,10 +1,11 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState, Fragment } from "react";
 import logo from './logo.svg';
 import frontcover from './frontcover.png';
 import './App.css';
 import { ethers } from 'ethers';
 
 function App() {
+    
     return (
         <div className="App">
             <header className="topNavigation">
@@ -20,15 +21,9 @@ function App() {
             <div className="audit-book-concept">
                 <h1>Audit Bookとは</h1>
                 <div className="bg-gray">
-                    <p>
-                        概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　
-                    </p>
-                    <p>
-                        概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　
-                    </p>
-                    <p>
-                        概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　
-                    </p>
+                    <p>概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　</p>
+                    <p>概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　</p>
+                    <p>概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　概要　がいよう　</p>
                 </div>
             </div>
             <div className="audit-book-content">
@@ -54,9 +49,7 @@ function App() {
                 </button>
             </div>
             <footer className="footer">
-                <p className="copyright">
-                    © 2023 <a href="">UNCHAIN</a> All Rights Reserved.
-                </p>
+                <p className="copyright">© 2023 <a href="">UNCHAIN</a> All Rights Reserved.</p>
             </footer>
         </div>
     );
