@@ -4,7 +4,10 @@ coverage
 coverage.json
 typechain
 typechain-types
-artifacts
+
+/artifacts/*
+!/artifacts/contracts
+/artifacts/contracts/**/*.dbg.json
 
 # Hardhat files
 cache
