@@ -3,12 +3,22 @@ import logo from './logo.svg';
 import frontcover from './frontcover.png';
 import './App.css';
 import { ethers } from 'ethers';
+import AuditBookContractJson from '../../contracts/artifacts/contracts/AuditBook.sol/AuditBook.json';
+import TestERC20ContractJson from '../../contracts/artifacts/contracts/test/TestERC20.sol/TestERC20.json';
+//import contract from './contracts/AuditBook.sol/AuditBook.json';
+
 
 {
     /************************************ここからグローバルな定数************************************/
 }
-//const abi = contract.abi;
+const AuditBookAbi = AuditBookContractJson.abi;
+const AuditBookContractAddress = '0xbDBebF9b9f41C6BCAf9CbC26290Ddc07ea0F490B';
+
 const contractAddress = '0xbDBebF9b9f41C6BCAf9CbC26290Ddc07ea0F490B';
+
+const TestERC20Abi = TestERC20ContractJson.abi;
+const TestERC20ContractAddress = '0xbDBebF9b9f41C6BCAf9CbC26290Ddc07ea0F490B';
+
 const MaticTestnetMumbaiNetworkChainId = '0x13881';
 
 function App() {
@@ -95,7 +105,52 @@ function App() {
         );
     };
 
-    const mintNFT = async () => {};
+    const BuyNFT = async () => {
+        const { ethereum } = window as any;    // Buttonクリックで実行 -> クライアントサイドの処理なので、windowが参照できethereumが扱える
+        const network = await ethereum.request({ method: 'eth_chainId' });
+
+        if (network.toString() === '0x13881') {
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            console.log("Found an account! Address: ", accounts[0]);
+            setMetamaskError(null);
+            setCurrentAccount(accounts[0]);
+
+            setIsLoading(true);
+
+            try {
+
+                setMineStatus('mining');
+
+                if (ethereum) {
+                const provider = new ethers.providers.Web3Provider(ethereum);
+                const signer = provider.getSigner();
+                const nftContract = new ethers.Contract(contractAddress, AuditBookAbi, signer);
+
+                console.log("Mint start!");
+
+                let nftTxn = await nftContract.mintNft({ gasLimit: 1600000 });
+
+                console.log("Mining... please wait");
+                await nftTxn.wait();
+
+                console.log(`Mined, see transaction: ${nftTxn.hash}`);
+                setMineStatus('success');
+
+                } else {
+                setMineStatus('error');
+                console.log("Ethereum object does not exist");
+                }
+
+                setIsLoading(false);
+
+            } catch (err) {
+                setMineStatus('error');
+                console.log(err);
+                setIsLoading(false);
+                alert("Failed to mint...");
+            }
+        }
+    };
 
     const renderButtun = (bname: any, isOnClick: any, ahref: any) => {
         if (isOnClick) {
@@ -117,11 +172,11 @@ function App() {
             );
         }
     };
-    const renderMintButtun = () => {
+    const renderBuyButtun = () => {
         return (
             <button
                 className="button-base connect-wallet-button2"
-                onClick={mintNFT}
+                onClick={BuyNFT}
             >
                 教科書をミント
             </button>
@@ -143,7 +198,7 @@ function App() {
             <div>{error && error.message}</div>*/}
                 {!currentAccount && renderButtun('ウォレットを接続', true, '')}
                 {currentAccount && !totalMintCount && !iaLoading && (
-                    <div>{renderMintButtun()}</div>
+                    <div>{renderBuyButtun()}</div>
                 )}
                 {currentAccount && totalMintCount && !iaLoading && (
                     <div>
