@@ -47,12 +47,7 @@ module.exports = {
           800: "#535353",
           900: myblackBaseColor,
         },
-        // error: '#B00020',
       },
-      // boxShadow: {
-      //   'inner-main-s': `inset 10px 10px 0 0 ${innerShadowColor}`,
-      //   'main-s': `5px 5px 0 0 ${innerShadowColor}`,
-      // },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
