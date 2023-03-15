@@ -21,7 +21,8 @@
         "SHØ <neila@users.noreply.github.com>"
     ],
     "scripts": {
-        "honkit": "cd packages/book && npm run honkit",
+        "book:serve": "cd packages/book && npm run serve",
+        "book:build": "cd packages/book && npm run build",
         "start:interface": "npm run start -w packages/interface",
         "lint": "eslint . && solhint --max-warnings 0 -c packages/contracts/**/*.sol",
         "lint:fix": "eslint --fix . && solhint --fix --max-warnings 0 -c packages/contracts/**/*.sol",
