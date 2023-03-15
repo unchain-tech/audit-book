@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "honkit": "npx honkit serve ./book_src ./docs"
+        "serve": "npx honkit serve ./book_src ./docs",
+        "build": "npx honkit build ./book_src ./docs"
     },
     "repository": {
         "type": "git",

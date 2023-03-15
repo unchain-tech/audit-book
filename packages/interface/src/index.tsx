@@ -1,22 +1,23 @@
-import "./index.css";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
-import { RecoilRoot } from "recoil";
-import { InitUser } from "./features/init";
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+
+import App from './App';
+import { InitUser } from './features/init';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
 root.render(
-  <BrowserRouter>
-    <RecoilRoot>
-      <InitUser>
-        <App />
-      </InitUser>
-    </RecoilRoot>
-  </BrowserRouter>
+    <BrowserRouter>
+        <RecoilRoot>
+            <InitUser>
+                <App />
+            </InitUser>
+        </RecoilRoot>
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
