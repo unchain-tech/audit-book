@@ -1,9 +1,0 @@
-**/node_modules
-
-packages/book/docs
-packages/book/**/*.md
-
-packages/contracts/artifacts
-packages/contracts/cache
-
-packages/interface/public
