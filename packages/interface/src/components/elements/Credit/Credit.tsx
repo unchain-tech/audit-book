@@ -10,23 +10,18 @@ export type CreditProps = BaseProps;
  * @param className 親要素から指定されたスタイル
  */
 export const Credit = ({ className }: CreditProps) => {
-    return (
-        <div
-            className={clsx(
-                'text-[1px]',
-                'text-gray-300',
-                'text-center',
-                className
-            )}
-        >
-            {'"Faun Book"'} {' ('}
-            <a href="https://skfb.ly/6tCFG">https://skfb.ly/6tCFG</a>
-            {')'} by hatsaru is licensed under Creative Commons Attribution
-            {' ('}
-            <a href="http://creativecommons.org/licenses/by/4.0/">
-                http://creativecommons.org/licenses/by/4.0/
-            </a>
-            {')'}.
-        </div>
-    );
+  return (
+    <div
+      className={clsx('text-[1px]', 'text-gray-300', 'text-center', className)}
+    >
+      {'"Faun Book"'} {' ('}
+      <a href="https://skfb.ly/6tCFG">https://skfb.ly/6tCFG</a>
+      {')'} by hatsaru is licensed under Creative Commons Attribution
+      {' ('}
+      <a href="http://creativecommons.org/licenses/by/4.0/">
+        http://creativecommons.org/licenses/by/4.0/
+      </a>
+      {')'}.
+    </div>
+  );
 };

@@ -1,25 +1,25 @@
 {
-    "name": "book",
-    "version": "0.1.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "serve": "npx honkit serve ./book_src ./docs",
-        "build": "npx honkit build ./book_src ./docs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/unchain-tech/audit-book.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "honkit": "^3.7.1"
-    },
-    "bugs": {
-        "url": "https://github.com/unchain-tech/audit-book/issues"
-    },
-    "homepage": "https://github.com/unchain-tech/audit-book#readme"
+  "name": "book",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npx honkit serve ./book_src ./docs",
+    "build": "npx honkit build ./book_src ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unchain-tech/audit-book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "honkit": "^3.7.1"
+  },
+  "bugs": {
+    "url": "https://github.com/unchain-tech/audit-book/issues"
+  },
+  "homepage": "https://github.com/unchain-tech/audit-book#readme"
 }

@@ -1,62 +1,62 @@
 {
-    "name": "audit-book",
-    "version": "0.1.0",
-    "description": "A book for all things related to smart contract auditing.",
-    "keywords": [],
-    "license": "ISC",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/unchain-tech/audit-book.git"
-    },
-    "bugs": {
-        "url": "https://github.com/unchain-tech/audit-book/issues"
-    },
-    "homepage": "https://github.com/unchain-tech/audit-book#readme",
-    "contributors": [
-        "Haku <32897506+0xHaku@users.noreply.github.com>",
-        "mashharuki <avp.104.106.107@ae.auone-net.jp>",
-        "Yosuke <yosuke2002jp@yahoo.co.jp>",
-        "yawn <69970183+yawn-c111@users.noreply.github.com>",
-        "SHØ <neila@users.noreply.github.com>"
-    ],
-    "scripts": {
-        "book:serve": "cd packages/book && npm run serve",
-        "book:build": "cd packages/book && npm run build",
-        "start:interface": "npm run start -w packages/interface",
-        "lint": "eslint . && solhint --max-warnings 0 -c packages/contracts/**/*.sol",
-        "lint:fix": "eslint --fix . && solhint --fix --max-warnings 0 -c packages/contracts/**/*.sol",
-        "prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write .",
-        "prettier:check": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --check .",
-        "test": "npm run --workspaces test",
-        "test:contract": "npm run test -w packages/contracts"
-    },
-    "workspaces": [
-        "packages\\contracts",
-        "packages\\book",
-        "packages\\interface"
-    ],
-    "simple-git-hooks": {
-        "pre-commit": "npx lint-staged"
-    },
-    "devDependencies": {
-        "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-        "@typescript-eslint/eslint-plugin": "^5.54.1",
-        "@typescript-eslint/parser": "^5.54.1",
-        "dotenv": "^16.0.3",
-        "eslint": "^8.0.0",
-        "eslint-config-prettier": "^8.7.0",
-        "eslint-config-react-app": "^7.0.1",
-        "eslint-config-standard": "^17.0.0",
-        "eslint-import-resolver-typescript": "^3.5.3",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-promise": "^6.1.1",
-        "prettier": "2.8.4",
-        "prettier-plugin-solidity": "^1.0.0-beta.13",
-        "simple-git-hooks": "^2.8.1",
-        "solhint": "^3.4.0",
-        "solidity-coverage": "^0.8.1"
-    }
+  "name": "audit-book",
+  "version": "0.1.0",
+  "description": "A book for all things related to smart contract auditing.",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unchain-tech/audit-book.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unchain-tech/audit-book/issues"
+  },
+  "homepage": "https://github.com/unchain-tech/audit-book#readme",
+  "contributors": [
+    "Haku <32897506+0xHaku@users.noreply.github.com>",
+    "mashharuki <avp.104.106.107@ae.auone-net.jp>",
+    "Yosuke <yosuke2002jp@yahoo.co.jp>",
+    "yawn <69970183+yawn-c111@users.noreply.github.com>",
+    "SHØ <neila@users.noreply.github.com>"
+  ],
+  "scripts": {
+    "book:serve": "cd packages/book && npm run serve",
+    "book:build": "cd packages/book && npm run build",
+    "start:interface": "npm run start -w packages/interface",
+    "lint": "eslint . && solhint --max-warnings 0 -c packages/contracts/**/*.sol",
+    "lint:fix": "eslint --fix . && solhint --fix --max-warnings 0 -c packages/contracts/**/*.sol",
+    "prettier": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write .",
+    "prettier:check": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --check .",
+    "test": "npm run --workspaces test",
+    "test:contract": "npm run test -w packages/contracts"
+  },
+  "workspaces": [
+    "packages\\contracts",
+    "packages\\book",
+    "packages\\interface"
+  ],
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "2.8.4",
+    "prettier-plugin-solidity": "^1.0.0-beta.13",
+    "simple-git-hooks": "^2.8.1",
+    "solhint": "^3.4.0",
+    "solidity-coverage": "^0.8.1"
+  }
 }

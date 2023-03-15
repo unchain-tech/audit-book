@@ -6,15 +6,15 @@ import { Main } from 'src/components/layouts/Main';
 import { MainHome } from 'src/components/layouts/Main/MainHome';
 
 export const Home = () => {
-    return (
-        <RedirectIfOwnedNFT>
-            <Div100vh>
-                <Header />
-                <Main>
-                    <MainHome />
-                </Main>
-                <Footer />
-            </Div100vh>
-        </RedirectIfOwnedNFT>
-    );
+  return (
+    <RedirectIfOwnedNFT>
+      <Div100vh>
+        <Header />
+        <Main>
+          <MainHome />
+        </Main>
+        <Footer />
+      </Div100vh>
+    </RedirectIfOwnedNFT>
+  );
 };

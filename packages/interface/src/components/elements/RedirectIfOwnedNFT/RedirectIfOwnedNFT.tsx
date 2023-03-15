@@ -7,12 +7,12 @@ import { BaseProps } from 'src/types/BaseProps';
 export type RedirectIfOwnedNFTProps = BaseProps;
 
 export const RedirectIfOwnedNFT = ({ children }: RedirectIfOwnedNFTProps) => {
-    const user = useUserValue();
-    const isInitUser = useRecoilValue(isInitUserState);
+  const user = useUserValue();
+  const isInitUser = useRecoilValue(isInitUserState);
 
-    if (isInitUser && user.isOwnAuditBook) {
-        alert(ALREADY_OWNED_NFT);
-        window.location.href = 'https://ninjaudit.com/';
-    }
-    return <>{children}</>;
+  if (isInitUser && user.isOwnAuditBook) {
+    alert(ALREADY_OWNED_NFT);
+    window.location.href = 'https://ninjaudit.com/';
+  }
+  return <>{children}</>;
 };

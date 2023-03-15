@@ -1,5 +1,4 @@
 **/node_modules
-.github
 
 packages/book/docs
 packages/book/**/*.md

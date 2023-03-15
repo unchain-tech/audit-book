@@ -10,14 +10,14 @@ export type SpinnerProps = BaseProps;
  * @param className 親要素から指定されたスタイル
  */
 export const Spinner = ({ className }: SpinnerProps) => {
-    return (
-        <div
-            className={clsx(
-                'animate-spin',
-                'rounded-full',
-                'border-t-transparent',
-                className
-            )}
-        ></div>
-    );
+  return (
+    <div
+      className={clsx(
+        'animate-spin',
+        'rounded-full',
+        'border-t-transparent',
+        className
+      )}
+    ></div>
+  );
 };
