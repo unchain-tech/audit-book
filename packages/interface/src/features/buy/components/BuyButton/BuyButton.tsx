@@ -51,7 +51,7 @@ export const BuyButton = ({ className }: BuyButtonProps) => {
   return (
     <Button
       disable={user.isOwnAuditBook}
-      className={clsx("text-white", "w-[300px]", className)}
+      className={clsx("text-white", className)}
       onClick={handleClick}
     >
       {user.isOwnAuditBook ? "購入済み" : `${PRICE} CHAI で Audit Book を購入`}
