@@ -1,6 +1,6 @@
-const { loadFixture } = require('@nomicfoundation/hardhat-network-helpers');
-const { expect } = require('chai');
-const { BigNumber } = require('ethers');
+import { loadFixture } from '@nomicfoundation/hardhat-network-helpers';
+import { expect } from 'chai';
+import { ethers } from 'hardhat';
 
 const initialPrice = ethers.utils.parseEther('1000');
 const initialTokenUri = 'ipfs://QmZyDPjt35VYvFLB7r76ME78ADMH7ZvuMGbeV4UzbPjPHU';
@@ -13,7 +13,7 @@ describe('AuditBookNFT', function () {
         // Contracts are deployed using the first signer/account by default
         const [owner, otherAccount] = await ethers.getSigners();
 
-        const TestERC20 = await hre.ethers.getContractFactory('TestERC20');
+        const TestERC20 = await ethers.getContractFactory('TestERC20');
         const testERC20 = await TestERC20.deploy(
             ethers.utils.parseEther('200000')
         );
@@ -21,7 +21,7 @@ describe('AuditBookNFT', function () {
             .connect(owner)
             .transfer(otherAccount.address, ethers.utils.parseEther('100000'));
 
-        const AuditBook = await hre.ethers.getContractFactory('AuditBook');
+        const AuditBook = await ethers.getContractFactory('AuditBook');
         const auditBook = await AuditBook.deploy(
             testERC20.address,
             initialPrice,
