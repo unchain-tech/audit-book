@@ -14,7 +14,7 @@ export const MainHome = () => {
     const isInitUser = useRecoilValue(isInitUserState);
 
     return (
-        <>
+        <div className={clsx('flex', 'flex-col', 'items-center')}>
             <Title className={clsx('m-8', 'text-center')} />
             <Abstract
                 className={clsx('mx-[50px]', 'mb-[10px]', 'text-justify')}
@@ -38,8 +38,10 @@ export const MainHome = () => {
                     )}
                 />
             ) : (
-                <BuyButton className={clsx('m-[30px]', 'h-[40px]')} />
+                <BuyButton
+                    className={clsx('m-[30px]', 'w-[300px]', 'h-[40px]')}
+                />
             )}
-        </>
+        </div>
     );
 };

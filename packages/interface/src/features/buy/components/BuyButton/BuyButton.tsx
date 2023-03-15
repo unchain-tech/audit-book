@@ -50,10 +50,11 @@ export const BuyButton = ({ className }: BuyButtonProps) => {
                 />
             </Button>
         );
+
     return (
         <Button
             disable={user.isOwnAuditBook}
-            className={clsx('text-white', 'w-[300px]', className)}
+            className={clsx('text-white', className)}
             onClick={handleClick}
         >
             {user.isOwnAuditBook
