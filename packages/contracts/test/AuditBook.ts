@@ -1,4 +1,5 @@
 import { loadFixture } from '@nomicfoundation/hardhat-network-helpers';
+import '@nomiclabs/hardhat-ethers';
 import { expect } from 'chai';
 import { ethers } from 'hardhat';
 
