@@ -1,1 +1,1 @@
-export * from "./RedirectIfOwnedNFT";
+export * from './RedirectIfOwnedNFT';
