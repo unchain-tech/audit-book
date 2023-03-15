@@ -45,6 +45,12 @@
             "last 1 safari version"
         ]
     },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
     "devDependencies": {
         "autoprefixer": "^10.4.14",
         "eslint-plugin-react": "^7.32.2",
