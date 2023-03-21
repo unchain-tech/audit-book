@@ -30,6 +30,9 @@ const config: HardhatUserConfig = {
             accounts: PRIVATE_KEY ? [`0x${PRIVATE_KEY}`] : 'remote',
         },
     },
+    gasReporter: {
+        enabled: true,
+    },
 };
 
 export default config;

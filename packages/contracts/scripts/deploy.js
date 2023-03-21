@@ -12,7 +12,7 @@ async function main() {
     const auditBook = await AuditBook.deploy(
         '0x4491d1c47bbde6746f878400090ba6935a91dab6',
         ethers.utils.parseEther('1000'),
-        'ipfs://QmZyDPjt35VYvFLB7r76ME78ADMH7ZvuMGbeV4UzbPjPHU'
+        ''
     );
 
     await auditBook.deployed();

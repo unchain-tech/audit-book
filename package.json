@@ -45,6 +45,7 @@
         "eslint": "^8.34.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-prettier": "^4.2.1",
+        "hardhat-gas-reporter": "^1.0.9",
         "prettier": "2.8.4",
         "simple-git-hooks": "^2.8.1",
         "solhint": "^3.4.0"
