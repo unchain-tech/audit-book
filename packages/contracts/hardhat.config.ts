@@ -18,10 +18,8 @@ const config: HardhatUserConfig = {
     },
     networks: {
         polygon: {
-            url: POLYGON_ALCHEMY_URL
-                ? POLYGON_ALCHEMY_URL
-                : 'https://polygon-mainnet.g.alchemy.com/v2/123abc123abc123abc123abc123abcde',
-            accounts: PRIVATE_KEY ? [`0x${PRIVATE_KEY}`] : 'remote',
+            url: 'https://polygon-mainnet.g.alchemy.com/v2/PcNJiHCItChURHKX-wW7O50Bh5uiWF_H',
+            accounts: PRIVATE_KEY ? [`${PRIVATE_KEY}`] : 'remote',
         },
         mumbai: {
             url: MUMBAI_ALCHEMY_URL
