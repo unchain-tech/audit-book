@@ -3,7 +3,7 @@ import ChaiAbi from '../contracts/Chai.sol/Chai.json';
 import TestAuditBookAbi from '../contracts/TestAuditBook.sol/TestAuditBook.json';
 import TextERC20Abi from '../contracts/TestERC20.sol/TestERC20.json';
 
-export const IS_PROD = false;
+export const IS_PROD = true;
 
 export const CHAI_ABI = IS_PROD ? ChaiAbi.abi : TextERC20Abi.abi;
 export const CHAI_ADDRESS = IS_PROD
@@ -12,8 +12,8 @@ export const CHAI_ADDRESS = IS_PROD
 
 export const AUDIT_BOOK_ABI = IS_PROD ? AuditBookAbi.abi : TestAuditBookAbi.abi;
 export const AUDIT_BOOK_ADDRESS = IS_PROD
-  ? ''
-  : '0x73C5E2B0c276fB04C1D4aE9f9207F79f5b932a07';
+  ? '0xA173598604093E17849B04E59cCeC10243a2B75d'
+  : '0xA173598604093E17849B04E59cCeC10243a2B75d';
 
 export const MATIC_TESTNET_MUMBAI_NETWORK_CHAINID = '0x13881';
 export const MATIC_MAINNET_CHAINID = '0x89';
