@@ -1,4 +1,4 @@
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import {
   AUDIT_BOOK_ADDRESS,
   DECIMAL,
@@ -6,13 +6,13 @@ import {
   MATIC_TESTNET_MUMBAI_NETWORK_CHAINID,
   MISMATCH_CHAIN,
   PRICE,
-} from "src/const";
-import { ALREADY_CONNECTED, NOT_CONNECT } from "src/const/message";
-import { ClientAuditBook, ClientChai } from "src/features/buy";
-import { ClientWallet } from "src/lib/wallet/ClientWallet";
-import { UserModel } from "src/models/UserModel";
-import { isInitUserState } from "src/stores/isInitUserState";
-import { UserState, userState } from "src/stores/userState";
+} from 'src/const';
+import { ALREADY_CONNECTED, NOT_CONNECT } from 'src/const/message';
+import { ClientAuditBook, ClientChai } from 'src/features/buy';
+import { ClientWallet } from 'src/lib/wallet/ClientWallet';
+import { UserModel } from 'src/models/UserModel';
+import { isInitUserState } from 'src/stores/isInitUserState';
+import { UserState, userState } from 'src/stores/userState';
 
 export interface UserController {
   init: () => Promise<void>;
@@ -33,7 +33,7 @@ export const useUserController = (): UserController => {
    */
   const init = async (): Promise<void> => {
     const address = await _getConnectedAddress();
-    if (address === "") {
+    if (address === '') {
       setUser(new UserModel());
       setIsInitUser(true);
       return;
@@ -89,7 +89,7 @@ export const useUserController = (): UserController => {
     if (addresses.length === 0) {
       setUser(new UserModel());
       console.log(NOT_CONNECT);
-      return "";
+      return '';
     }
     console.log(ALREADY_CONNECTED(addresses[0]));
     return addresses[0].toLowerCase();

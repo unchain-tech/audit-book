@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import {IERC20, SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
+import {IERC20, SafeERC20} from '@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol';
+import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
+import '@openzeppelin/contracts/utils/Counters.sol';
 
 contract AuditBook is ERC721, Ownable {
     using Counters for Counters.Counter;
@@ -19,21 +19,27 @@ contract AuditBook is ERC721, Ownable {
 
     string public tokenUriJson;
 
-    constructor(address chai_,uint price_,string memory tokenUriJson_) ERC721("AuditBook", "AB") {
+    constructor(
+        address chai_,
+        uint price_,
+        string memory tokenUriJson_
+    ) ERC721('AuditBook', 'AB') {
         chai = chai_;
         price = price_;
         tokenUriJson = tokenUriJson_;
     }
 
     function safeMint(address to) external {
-        if (balanceOf(to) > 0) revert("Already has an AuditBook");
+        if (balanceOf(to) > 0) revert('Already has an AuditBook');
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         IERC20(chai).safeTransferFrom(msg.sender, address(this), price);
         _safeMint(to, tokenId);
     }
 
-    function tokenURI(uint tokenId) public view virtual override returns (string memory) {
+    function tokenURI(
+        uint tokenId
+    ) public view virtual override returns (string memory) {
         return tokenUriJson;
     }
 
@@ -46,6 +52,9 @@ contract AuditBook is ERC721, Ownable {
     }
 
     function withdraw() external onlyOwner {
-        IERC20(chai).safeTransfer(msg.sender, IERC20(chai).balanceOf(address(this)));
+        IERC20(chai).safeTransfer(
+            msg.sender,
+            IERC20(chai).balanceOf(address(this))
+        );
     }
 }

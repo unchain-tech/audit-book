@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ethers } from "ethers";
+import { ethers } from 'ethers';
 import {
   MATIC_TESTNET_MUMBAI_NETWORK_CHAINID,
   NOT_FOUND_METAMASK,
-} from "src/const";
+} from 'src/const';
 
 export type AddEthereumChainParameter = {
   chainId: string;
@@ -19,16 +19,16 @@ export type AddEthereumChainParameter = {
 };
 
 export const chainsParams: { [key: string]: AddEthereumChainParameter } = {
-  "0x13881": {
+  '0x13881': {
     chainId: MATIC_TESTNET_MUMBAI_NETWORK_CHAINID,
-    chainName: "Matic Testnet Mumbai",
+    chainName: 'Matic Testnet Mumbai',
     nativeCurrency: {
-      name: "MATIC",
-      symbol: "MATIC",
+      name: 'MATIC',
+      symbol: 'MATIC',
       decimals: 18,
     },
-    rpcUrls: ["https://rpc-mumbai.maticvigil.com/"],
-    blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
+    rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
+    blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
     iconUrls: [],
   },
 };
@@ -57,7 +57,7 @@ export class ClientWallet {
    */
   connect = async (): Promise<string[]> => {
     const conectedAddresses = await this.provider.send(
-      "eth_requestAccounts",
+      'eth_requestAccounts',
       []
     );
     console.log(`Connected: ${conectedAddresses}`);
@@ -69,7 +69,7 @@ export class ClientWallet {
    * @return {Promise<string[]>} 接続されているウォレットアドレス一覧
    */
   getConnectedAddresses = async (): Promise<string[]> => {
-    return await this.provider.send("eth_accounts", []);
+    return await this.provider.send('eth_accounts', []);
   };
 
   /**
@@ -77,7 +77,7 @@ export class ClientWallet {
    * @return {Promise<string>} 接続されているウォレットアドレス一覧
    */
   getChainId = async (): Promise<string> => {
-    return await this.provider.send("eth_chainId", []);
+    return await this.provider.send('eth_chainId', []);
   };
 
   /**
@@ -85,7 +85,7 @@ export class ClientWallet {
    * @param chainId 切替先チェーンのID
    */
   switchChain = async (chainId: string) => {
-    await this.provider.send("wallet_switchEthereumChain", [
+    await this.provider.send('wallet_switchEthereumChain', [
       {
         chainId: chainId,
       },
@@ -97,7 +97,7 @@ export class ClientWallet {
    * @param params 切替先チェーンパラメータ
    */
   addChain = async (params: AddEthereumChainParameter) => {
-    await this.provider.send("wallet_addEthereumChain", [params]);
+    await this.provider.send('wallet_addEthereumChain', [params]);
   };
 
   /**
@@ -106,14 +106,14 @@ export class ClientWallet {
    */
   switchChainIfNotExistAdd = async (chainId: string) => {
     try {
-      await this.provider.send("wallet_switchEthereumChain", [
+      await this.provider.send('wallet_switchEthereumChain', [
         {
           chainId: chainId,
         },
       ]);
     } catch (e) {
       console.log(e);
-      console.log("指定のチェーンを追加します。");
+      console.log('指定のチェーンを追加します。');
       await this.addChain(chainsParams[chainId]);
     }
   };
@@ -133,5 +133,5 @@ export class ClientWallet {
  * @return {boolean} true -> インストール済み / false 末インストール
  */
 const _isInstallWallet = (ethereum: any): boolean => {
-  return typeof ethereum !== "undefined";
+  return typeof ethereum !== 'undefined';
 };

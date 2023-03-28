@@ -1,6 +1,6 @@
-import { atom } from "recoil";
+import { atom } from 'recoil';
 
 export const isInitUserState = atom<boolean>({
-  key: "isInitUserState",
+  key: 'isInitUserState',
   default: false,
 });

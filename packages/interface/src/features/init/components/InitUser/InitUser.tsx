@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { useRecoilValue } from "recoil";
-import { useUserController } from "src/hooks/useUser";
-import { isInitUserState } from "src/stores/isInitUserState";
-import { BaseProps } from "src/types/BaseProps";
+import { useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
+import { useUserController } from 'src/hooks/useUser';
+import { isInitUserState } from 'src/stores/isInitUserState';
+import { BaseProps } from 'src/types/BaseProps';
 
 export type InitUserProps = BaseProps;
 

@@ -1,10 +1,10 @@
-import { ethers } from "ethers";
+import { ethers } from 'ethers';
 import {
   AUDIT_BOOK_ABI,
   AUDIT_BOOK_ADDRESS,
   NOT_FOUND_CONNECTED_ADDRESS,
-} from "src/const";
-import { ClientWallet } from "src/lib/wallet/ClientWallet";
+} from 'src/const';
+import { ClientWallet } from 'src/lib/wallet/ClientWallet';
 
 export class ClientAuditBook {
   private static _instance: ClientAuditBook;

@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import { BaseProps } from "src/types/BaseProps";
+import clsx from 'clsx';
+import { BaseProps } from 'src/types/BaseProps';
 
 export type TitleProps = BaseProps;
 
@@ -11,7 +11,7 @@ export type TitleProps = BaseProps;
  */
 export const Title = ({ className }: TitleProps) => {
   return (
-    <div className={clsx("text-4xl", "font-bold", className)}>
+    <div className={clsx('text-4xl', 'font-bold', className)}>
       Audit Bookとは
     </div>
   );

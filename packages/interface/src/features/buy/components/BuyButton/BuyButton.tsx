@@ -1,12 +1,12 @@
-import clsx from "clsx";
-import { useState } from "react";
-import { useRecoilValue } from "recoil";
-import { Button } from "src/components/elements/Button";
-import { Spinner } from "src/components/elements/Spinner";
-import { PRICE } from "src/const";
-import { useUserState } from "src/hooks/useUser";
-import { isInitUserState } from "src/stores/isInitUserState";
-import { BaseProps } from "src/types/BaseProps";
+import clsx from 'clsx';
+import { useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import { Button } from 'src/components/elements/Button';
+import { Spinner } from 'src/components/elements/Spinner';
+import { PRICE } from 'src/const';
+import { useUserState } from 'src/hooks/useUser';
+import { isInitUserState } from 'src/stores/isInitUserState';
+import { BaseProps } from 'src/types/BaseProps';
 
 export type BuyButtonProps = BaseProps;
 
@@ -16,7 +16,7 @@ export const BuyButton = ({ className }: BuyButtonProps) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = async () => {
-    if (user.id === "") return;
+    if (user.id === '') return;
     setIsLoading(true);
     try {
       await userController.buy(user.id);
@@ -38,23 +38,24 @@ export const BuyButton = ({ className }: BuyButtonProps) => {
       <Button
         disable
         className={clsx(
-          "flex",
-          "justify-center",
-          "text-white",
-          "w-[300px]",
+          'flex',
+          'justify-center',
+          'text-white',
+          'w-[300px]',
           className
         )}
       >
-        <Spinner className={clsx("w-[20px]", "h-[20px]", "border-[2px]")} />
+        <Spinner className={clsx('w-[20px]', 'h-[20px]', 'border-[2px]')} />
       </Button>
     );
+
   return (
     <Button
       disable={user.isOwnAuditBook}
-      className={clsx("text-white", className)}
+      className={clsx('text-white', className)}
       onClick={handleClick}
     >
-      {user.isOwnAuditBook ? "購入済み" : `${PRICE} CHAI で Audit Book を購入`}
+      {user.isOwnAuditBook ? '購入済み' : `${PRICE} CHAI で Audit Book を購入`}
     </Button>
   );
 };

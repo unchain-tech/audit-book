@@ -1,6 +1,6 @@
-import { ethers } from "ethers";
-import { CHAI_ABI, CHAI_ADDRESS, NOT_FOUND_CONNECTED_ADDRESS } from "src/const";
-import { ClientWallet } from "src/lib/wallet/ClientWallet";
+import { ethers } from 'ethers';
+import { CHAI_ABI, CHAI_ADDRESS, NOT_FOUND_CONNECTED_ADDRESS } from 'src/const';
+import { ClientWallet } from 'src/lib/wallet/ClientWallet';
 
 export class ClientChai {
   private static _instance: ClientChai;

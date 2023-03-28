@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import { BaseProps } from "src/types/BaseProps";
+import clsx from 'clsx';
+import { BaseProps } from 'src/types/BaseProps';
 
 export type SpinnerProps = BaseProps;
 
@@ -13,9 +13,9 @@ export const Spinner = ({ className }: SpinnerProps) => {
   return (
     <div
       className={clsx(
-        "animate-spin",
-        "rounded-full",
-        "border-t-transparent",
+        'animate-spin',
+        'rounded-full',
+        'border-t-transparent',
         className
       )}
     ></div>
