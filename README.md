@@ -1,5 +1,9 @@
 # Audit-Book
 
+## Deploy status
+
+shop 👉 [![Netlify Status](https://api.netlify.com/api/v1/badges/6020cc52-cd5d-413c-aa1d-633c9216c549/deploy-status)](https://app.netlify.com/sites/audit-book/deploys) &emsp; book 👉 [![pages-build-deployment](https://github.com/unchain-tech/audit-book/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/unchain-tech/audit-book/actions/workflows/pages/pages-build-deployment)
+
 ## Workspaces
 
 ```
