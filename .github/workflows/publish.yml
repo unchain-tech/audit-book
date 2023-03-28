@@ -26,4 +26,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./packages/book/docs
           enable_jekyll: true
-          cname: audit-book.unchain.tech
