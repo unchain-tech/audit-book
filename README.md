@@ -32,6 +32,5 @@ npm run book:serve
 その他各 workspace 配下`package.json`　を確認しながら以下で適宜コマンド実行
 
 ```
-yarn workspace [workspace_name] [workspace_command]
-
+npm run [workspace_command] -w packages/[workspace_name]
 ```
