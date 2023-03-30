@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ethers } from 'ethers';
-import {
-  MATIC_TESTNET_MUMBAI_NETWORK_CHAINID,
-  NOT_FOUND_METAMASK,
-} from 'src/const';
+import { MATIC_MAINNET_CHAINID, NOT_FOUND_METAMASK } from 'src/const';
 
 export type AddEthereumChainParameter = {
   chainId: string;
@@ -19,16 +16,16 @@ export type AddEthereumChainParameter = {
 };
 
 export const chainsParams: { [key: string]: AddEthereumChainParameter } = {
-  '0x13881': {
-    chainId: MATIC_TESTNET_MUMBAI_NETWORK_CHAINID,
-    chainName: 'Matic Testnet Mumbai',
+  '0x89': {
+    chainId: MATIC_MAINNET_CHAINID,
+    chainName: 'Matic(Poygon) Mainnet',
     nativeCurrency: {
       name: 'MATIC',
       symbol: 'MATIC',
       decimals: 18,
     },
-    rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
-    blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
+    rpcUrls: ['https://rpc-mainnet.maticvigil.com/'],
+    blockExplorerUrls: ['https://polygonscan.com/'],
     iconUrls: [],
   },
 };
