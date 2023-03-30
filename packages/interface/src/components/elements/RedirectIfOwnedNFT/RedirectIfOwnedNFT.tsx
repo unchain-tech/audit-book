@@ -12,7 +12,7 @@ export const RedirectIfOwnedNFT = ({ children }: RedirectIfOwnedNFTProps) => {
 
   if (isInitUser && user.isOwnAuditBook) {
     alert(ALREADY_OWNED_NFT);
-    window.location.href = 'https://ninjaudit.com/';
+    window.location.href = 'https://unchain-tech.github.io/audit-book/';
   }
   return <>{children}</>;
 };
