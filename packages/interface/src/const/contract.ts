@@ -19,5 +19,4 @@ export const MATIC_TESTNET_MUMBAI_NETWORK_CHAINID = '0x13881';
 export const MATIC_MAINNET_CHAINID = '0x89';
 export const DECIMAL = 10 ** 18;
 
-// TODO: 本の値段決まったら修正する
-export const PRICE = 1000;
+export const PRICE = 500;

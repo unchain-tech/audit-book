@@ -3,7 +3,7 @@ import {
   AUDIT_BOOK_ADDRESS,
   DECIMAL,
   LACK_OF_CHAI,
-  MATIC_TESTNET_MUMBAI_NETWORK_CHAINID,
+  MATIC_MAINNET_CHAINID,
   MISMATCH_CHAIN,
   PRICE,
 } from 'src/const';
@@ -49,10 +49,8 @@ export const useUserController = (): UserController => {
    */
   const login = async (): Promise<void> => {
     const wallet = await ClientWallet.instance();
-    if ((await wallet.getChainId()) !== MATIC_TESTNET_MUMBAI_NETWORK_CHAINID)
-      await wallet.switchChainIfNotExistAdd(
-        MATIC_TESTNET_MUMBAI_NETWORK_CHAINID
-      );
+    if ((await wallet.getChainId()) !== MATIC_MAINNET_CHAINID)
+      await wallet.switchChainIfNotExistAdd(MATIC_MAINNET_CHAINID);
     const addresses = await wallet.connect();
     const auditBook = await ClientAuditBook.instance();
     const balanceOfAuditBook = await auditBook.balanceOf(addresses[0]);
@@ -81,7 +79,7 @@ export const useUserController = (): UserController => {
    */
   const _getConnectedAddress = async (): Promise<string> => {
     const wallet = await ClientWallet.instance();
-    if ((await wallet.getChainId()) !== MATIC_TESTNET_MUMBAI_NETWORK_CHAINID) {
+    if ((await wallet.getChainId()) !== MATIC_MAINNET_CHAINID) {
       setUser(new UserModel());
       throw new Error(MISMATCH_CHAIN);
     }
