@@ -38,3 +38,22 @@ npm run book:serve
 ```
 npm run [workspace_command] -w packages/[workspace_name]
 ```
+
+## 追記・編集方法
+
+1. ソースコードの入った[レポジトリ](https://github.com/unchain-tech/audit-book)を clone します。
+
+   - `git clone git@github.com:unchain-tech/audit-book.git`
+
+2. 編集用のブランチを切ります。
+
+   - `git checkout -b YOUR_BRANCH_NAME origin/YOUR_BRANCH_NAME`
+
+3. 本の編集をします。本の内容は `packages/book/book_src/**/*.md` です。
+4. 追加したら保存し、コミットします。
+
+   - `git add .`
+   - `git commit -m "編集に関するコミットメッセージ"`
+
+5. 本に反映させます。
+   - `git push -u origin YOUR_BRANCH_NAME`
